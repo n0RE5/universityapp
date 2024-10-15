@@ -22,7 +22,7 @@ const Select: React.FC<SelectProps> = ({ groups, onChange, currentGroupId, curre
             onChange={(e) => onChange(e?.value as string)}
             options={groupsSelectOptions}
             noOptionsMessage={() => 'Группа не найдена'}
-            className='w-full'
+            className='w-full h-full'
             value={{
                 value: currentGroupId,
                 label: currentGroupName
