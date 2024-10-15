@@ -10,4 +10,7 @@ export default defineConfig({
       include: "**/*.svg?react",
     })
   ],
+  build: {
+    outDir: './build',
+  }
 })
