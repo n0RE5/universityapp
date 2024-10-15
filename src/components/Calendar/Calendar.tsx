@@ -27,7 +27,7 @@ const Calendar: React.FC<CalendarProps> = ({ date, onChange }) => {
                     <CalendarIcon className='text-white dark:text-black' />
                 </div>
             </div>
-            <Box className={`shadow-[0px_0px_5px_#EFEFEF] overflow-hidden bg-[#FEFEFE] dark:shadow-[0px_0px_5px_#222222] relative dark:bg-[#222] transition-all duration-300 ${fullHeight ? 'max-h-[300px]' : 'max-h-[103px]'}`}>
+            <Box className={`shadow-[0px_0px_5px_#EFEFEF] overflow-hidden bg-[#FEFEFE] dark:shadow-none relative dark:bg-[#222] transition-all duration-300 ${fullHeight ? 'max-h-[300px]' : 'max-h-[103px]'}`}>
                 <div className='w-full flex mb-2 justify-between items-center'>
                     <div className='font-bold text-[11px] text-[#4F4F4F] dark:text-white'>
                         {date?.getFullYear()} {MONTH_NAMES[date?.getMonth() || 0]}

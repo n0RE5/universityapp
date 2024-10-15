@@ -14,7 +14,7 @@ const ScheduleItem: React.FC<ScheduleItemProps> = ({ lesson, highlighted=false }
     return (
         <Box className={highlighted
             ? 'bg-[#D01F36] shadow-[0px_0px_5px_#D01F36]'
-            : 'shadow-[0px_0px_5px_#EFEFEF] bg-[#FEFEFE] dark:shadow-[0px_0px_5px_#222222] dark:bg-[#222]'
+            : 'shadow-[0px_0px_5px_#EFEFEF] bg-[#FEFEFE] dark:shadow-none dark:bg-[#222]'
         }>
             <div className='flex'>
                 <div className='flex flex-col w-[70%]'>
@@ -29,7 +29,7 @@ const ScheduleItem: React.FC<ScheduleItemProps> = ({ lesson, highlighted=false }
                     </div>
                 </div>
                 <div className='flex flex-col w-[30%]'>
-                    <div className={`text-base self-end text-end font-bold text-[#333] dark:text-white {highlighted ? 'text-[#FEFEFE]' : ''}`}>
+                    <div className={`text-base self-end text-end font-bold text-[#333] dark:text-white ${highlighted ? '!text-[#FEFEFE]' : ''}`}>
                         {getLessonTime(lesson.lessonStartTime)}
                     </div>
                 </div>

@@ -71,10 +71,10 @@ const MainPage = () => {
                         />
                     </div>
                     <div className="flex gap-[15px]">
-                        <div className="h-10 w-10 flex items-center hover:cursor-pointer rounded-full justify-center transition bg-[#FEFEFE] shadow-[0_0_3px_#EDEDED] text-white hover:bg-[#E0E0E0] focus:bg-[#E0E0E0] dark:text-white dark:bg-[#222] dark:shadow-none dark:hover:bg-[#333] dark:focus:bg-[#333]">
+                        <div className="h-10 w-10 flex items-center hover:cursor-pointer rounded-full justify-center transition bg-[#FEFEFE] shadow-[0_0_3px_#EDEDED] text-[#333] hover:bg-[#E0E0E0] focus:bg-[#E0E0E0] dark:text-white dark:bg-[#222] dark:shadow-none dark:hover:bg-[#333] dark:focus:bg-[#333]">
                             <SearchIcon />
                         </div>
-                        <div className="h-10 w-10 flex items-center hover:cursor-pointer rounded-full justify-center transition bg-[#FEFEFE] shadow-[0_0_3px_#EDEDED] text-white hover:bg-[#E0E0E0] focus:bg-[#E0E0E0] dark:text-white dark:bg-[#222] dark:shadow-none dark:hover:bg-[#333] dark:focus:bg-[#333]">
+                        <div className="h-10 w-10 flex items-center hover:cursor-pointer rounded-full justify-center transition bg-[#FEFEFE] shadow-[0_0_3px_#EDEDED] text-[#333] hover:bg-[#E0E0E0] focus:bg-[#E0E0E0] dark:text-white dark:bg-[#222] dark:shadow-none dark:hover:bg-[#333] dark:focus:bg-[#333]">
                             <FilterIcon />
                         </div>
                     </div>
