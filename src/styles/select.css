@@ -1,0 +1,38 @@
+.group-select__control {
+    @apply !bg-[#222] !border-none !w-full hover:!cursor-pointer !transition !shadow-[0_0_3px_#EDEDED] !rounded-full !text-center hover:!bg-[#E0E0E0] focus:!bg-[#E0E0E0];
+    @apply dark:!bg-[#222] dark:!text-white dark:!shadow-none dark:hover:!bg-[#333] dark:focus:!bg-[#333];
+}
+
+.group-select__indicators {
+    @apply !hidden;
+}
+
+.group-select__placeholder {
+    @apply !text-[#333];
+    @apply dark:!text-white
+}
+
+.group-select__single-value {
+    @apply !text-[#333];
+    @apply dark:!text-white
+}
+
+.group-select__input {
+    @apply text-center !text-[#333];
+    @apply dark:!text-white;
+}
+
+.group-select__menu {
+    @apply !mt-1 !bg-[#FEFEFE] !rounded-xl;
+    @apply dark:!bg-[#222];
+}
+
+.group-select__option--is-focused {
+    @apply !bg-[#E0E0E0];
+    @apply dark:!bg-[#333]
+}
+
+.group-select__option--is-selected {
+    @apply !bg-[#d5d5d5];
+    @apply dark:!bg-[#444]
+}
