@@ -5,6 +5,12 @@ export interface IGetScheduleResponse {
     }
 }
 
+export interface IUniversityGroup {
+    groupName: string
+    id: number
+    currentWeekScheduleLink: string
+}
+
 export default interface ILesson {
     groupName: string
     subgroup: string
