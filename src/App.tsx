@@ -10,6 +10,7 @@ const App: React.FC<AppProps> = ({ children }) => {
 
     useEffect(() => {
         tg.disableVerticalSwipes()
+        tg.expand()
     }, [])
 
     return (
