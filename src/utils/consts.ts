@@ -12,3 +12,5 @@ export const MONTH_NAMES = [
     'Ноябрь',
     'Декабрь'
 ]
+
+export const IB_2B_ID = '1424'

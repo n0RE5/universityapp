@@ -10,7 +10,7 @@ interface ScheduleProps {
 
 const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     const sortedSchedule = useMemo(() => schedule.sort((a, b) => a.lessonOrderNumber - b.lessonOrderNumber), [schedule])
-    
+
     const hightlight = (lesson: ILesson) => {
         const currentDate = new Date(lesson.lessonDate)
         const scheduleDateArray = schedule.map(i => new Date(parseLessonDate(i.lessonDate, i.lessonStartTime)))
@@ -21,20 +21,15 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
 
     return (
         <div className='w-full'>
-            {sortedSchedule.length
-                ? <div className='flex flex-col gap-6'>
-                    {sortedSchedule.map((lesson, index) =>
-                        <ScheduleItem 
-                            key={index} 
-                            lesson={lesson}
-                            highlighted={hightlight(lesson)}
-                        />
-                    )}
-                </div>
-                : <div>
-
-                </div>
-            }
+            <div className='flex flex-col gap-6'>
+                {sortedSchedule.map((lesson, index) =>
+                    <ScheduleItem
+                        key={index}
+                        lesson={lesson}
+                        highlighted={hightlight(lesson)}
+                    />
+                )}
+            </div>
         </div>
     );
 }
