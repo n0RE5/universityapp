@@ -1,5 +1,6 @@
 @import './styles/datepicker.css';
 @import './styles/select.css';
+@import './styles/switcher.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,0 +1,17 @@
+.switcher-active {
+    @apply !bg-[#D01F36];
+}
+
+.switcher {
+    @apply transition flex px-[6px] hover:cursor-pointer w-[56px] py-1 rounded-full bg-[#333] ;
+    @apply dark:bg-white;
+}
+
+.switcher_thumbler {
+    @apply transition w-[22px] h-[22px] bg-white rounded-full;
+    @apply dark:bg-[#222];
+}
+
+.switcher_thumbler-active {
+    @apply !bg-white translate-x-full;
+}
