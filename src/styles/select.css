@@ -1,5 +1,5 @@
 .group-select__control {
-    @apply !bg-[#222] !border-none !w-full hover:!cursor-pointer !transition !shadow-[0_0_3px_#EDEDED] !rounded-full !text-center hover:!bg-[#E0E0E0] focus:!bg-[#E0E0E0];
+    @apply !bg-[#FEFEFE] !border-none !w-full hover:!cursor-pointer !transition !shadow-[0_0_3px_#EDEDED] !rounded-full !text-center hover:!bg-[#E0E0E0] focus:!bg-[#E0E0E0];
     @apply dark:!bg-[#222] dark:!text-white dark:!shadow-none dark:hover:!bg-[#333] dark:focus:!bg-[#333];
 }
 

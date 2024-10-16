@@ -27,7 +27,7 @@ body {
 
 @layer components {
     body {
-        @apply bg-[#ffffff] text-[#121212];
+        @apply bg-[#F9F9F9] text-[#121212];
         @apply dark:bg-[#121212] dark:text-[#ffffff];
     }
 }
