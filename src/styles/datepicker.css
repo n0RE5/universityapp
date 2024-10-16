@@ -33,7 +33,7 @@
 }
 
 .react-datepicker .react-datepicker__day--selected {
-    @apply bg-[#D01F36] shadow-[0_0_3px_#D01F36];
+    @apply bg-[#D01F36] text-white shadow-[0_0_3px_#D01F36];
 }
 
 
