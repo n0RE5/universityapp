@@ -1,9 +1,11 @@
-import DatePicker from 'react-datepicker';
+import DatePicker, { registerLocale } from 'react-datepicker';
 import Box from '../UI/Box/Box';
 import CalendarIcon from '../../assets/icons/calendar2.svg?react'
 import { useState } from 'react';
 import { MONTH_NAMES } from '../../utils/consts';
 import { useHapticFeedback } from '@vkruglikov/react-telegram-web-app';
+import { ru } from 'date-fns/locale/ru';
+registerLocale('ru', ru)
 
 interface CalendarProps {
     date: Date | null
@@ -39,6 +41,7 @@ const Calendar: React.FC<CalendarProps> = ({ date, onChange }) => {
                 <div>
                     <DatePicker
                         inline
+                        locale='ru'
                         fixedHeight
                         popperClassName='mp-datepicker'
                         selected={date}

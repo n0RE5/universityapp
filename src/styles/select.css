@@ -3,6 +3,10 @@
     @apply dark:!bg-[#222] dark:!text-white dark:!shadow-none dark:hover:!bg-[#333] dark:focus:!bg-[#333];
 }
 
+.react-datepicker__day-name:first-letter {
+    text-transform: capitalize
+}
+
 .group-select__indicators {
     @apply !hidden;
 }
