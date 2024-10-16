@@ -12,7 +12,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
     const sortedSchedule = useMemo(() => schedule.sort((a, b) => a.lessonOrderNumber - b.lessonOrderNumber), [schedule])
 
     const hightlight = (lesson: ILesson) => {
-        const currentDate = new Date(lesson.lessonDate)
+        const currentDate = new Date()
         const scheduleDateArray = schedule.map(i => new Date(parseLessonDate(i.lessonDate, i.lessonStartTime)))
         const hightlightIndex = getNearestDate(currentDate, scheduleDateArray)
         const hightlightedLesson = schedule[hightlightIndex]
