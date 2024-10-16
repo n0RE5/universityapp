@@ -1,21 +1,21 @@
-import { createBrowserRouter, Navigate, RouteObject } from "react-router-dom"
+import { Navigate, RouteObject } from "react-router-dom"
 import MainPage from "../pages/MainPage/MainPage"
-import Layout from "../components/layouts/Layout/Layout"
+import SettingsPage from "../pages/SettingsPage/SettingsPage"
 
-export const routes: RouteObject[] = [
+export const public_routes: RouteObject[] = [
     {
         path: '/main',
-        element: <Layout><MainPage/></Layout>,
+        element: <MainPage/>,
         
     },
     {
         path: '/settings',
-        element: <Layout><MainPage/></Layout>,
+        element: <SettingsPage/>,
         
     },
     {
         path: '/contacts',
-        element: <Layout><MainPage/></Layout>,
+        element: <MainPage/>,
         
     },
     {
@@ -23,7 +23,3 @@ export const routes: RouteObject[] = [
         element: <Navigate to={`/main`} />
     }
 ] 
-
-const router = createBrowserRouter(routes)
-
-export default router

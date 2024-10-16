@@ -1,11 +1,10 @@
 import { useWebApp } from '@vkruglikov/react-telegram-web-app'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import { public_routes } from './router/router'
+import Layout from './components/layouts/Layout/Layout'
 
-interface AppProps {
-    children: React.ReactNode
-}
-
-const App: React.FC<AppProps> = ({ children }) => {
+const App = () => {
     const tg = useWebApp()
 
     useEffect(() => {
@@ -15,7 +14,13 @@ const App: React.FC<AppProps> = ({ children }) => {
 
     return (
         <>
-            {children}
+            <HashRouter>
+                <Routes>
+                    {public_routes.map((route, index) =>
+                        <Route key={index} element={<Layout>{route.element}</Layout>} path={route.path} />
+                    )}
+                </Routes>
+            </HashRouter>
         </>
     );
 }
