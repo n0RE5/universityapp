@@ -29,7 +29,7 @@ const Calendar: React.FC<CalendarProps> = ({ date, onChange }) => {
                     <CalendarIcon className='text-white dark:text-black' />
                 </div>
             </div>
-            <Box className={`shadow-[0px_0px_5px_#EFEFEF] overflow-hidden bg-[#FEFEFE] dark:shadow-none relative dark:bg-[#222] transition-all duration-300 ${fullHeight ? 'max-h-[300px]' : 'max-h-[103px]'}`}>
+            <Box className={`shadow-[0px_0px_5px_#EFEFEF] overflow-hidden bg-[#FEFEFE] dark:shadow-none relative dark:bg-[#222] transition-[max-height,_border-width] duration-300 ${fullHeight ? 'max-h-[250px] border-none' : 'max-h-[103px] border-b-[6px] border-transparent'}`}>
                 <div className='w-full flex mb-2 justify-between items-center'>
                     <div className='font-bold text-[11px] text-[#4F4F4F] dark:text-white'>
                         {date?.getFullYear()} {MONTH_NAMES[date?.getMonth() || 0]}
@@ -38,13 +38,14 @@ const Calendar: React.FC<CalendarProps> = ({ date, onChange }) => {
                         {dateStr}
                     </div>
                 </div>
-                <div>
+                <div className='h-full max-h-full overflow-hidden'>
                     <DatePicker
                         inline
                         locale='ru'
                         fixedHeight
                         popperClassName='mp-datepicker'
                         selected={date}
+                        calendarClassName={fullHeight ? 'calendar__active' : 'calendar__hidden'}
                         onChange={onChange}
                     />
                 </div>

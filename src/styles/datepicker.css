@@ -10,7 +10,7 @@
 }
 
 .react-datepicker .react-datepicker__week {
-    @apply flex items-center justify-between;
+    @apply flex items-center justify-between transition-all;
 }
 
 .react-datepicker .react-datepicker__month {
@@ -43,4 +43,16 @@
 
 .react-datepicker .react-datepicker__navigation {
     @apply hidden;
+}
+
+.calendar__hidden .react-datepicker__week:not(:has(div.react-datepicker__day--selected)) {
+    @apply max-h-0 opacity-0;
+}
+
+.calendar__hidden .react-datepicker__week:has(div.react-datepicker__day--selected) {
+    @apply -order-1;
+}
+
+.calendar__active .react-datepicker__week {
+    @apply max-h-full;
 }
