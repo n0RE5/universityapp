@@ -46,7 +46,7 @@
 }
 
 .calendar__hidden .react-datepicker__week:not(:has(div.react-datepicker__day--selected)) {
-    @apply max-h-0 opacity-0;
+    @apply max-h-0 opacity-0 pointer-events-none;
 }
 
 .calendar__hidden .react-datepicker__week:has(div.react-datepicker__day--selected) {
