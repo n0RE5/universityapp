@@ -1,6 +1,7 @@
 import { Navigate, RouteObject } from "react-router-dom"
 import MainPage from "../pages/MainPage/MainPage"
 import SettingsPage from "../pages/SettingsPage/SettingsPage"
+import ContactsPage from "../pages/ContactsPage/ContactsPage"
 
 export const public_routes: RouteObject[] = [
     {
@@ -15,7 +16,7 @@ export const public_routes: RouteObject[] = [
     },
     {
         path: '/contacts',
-        element: <MainPage/>,
+        element: <ContactsPage/>,
         
     },
     {
