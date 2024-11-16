@@ -6,9 +6,13 @@ export interface IGetScheduleResponse {
 }
 
 export interface IUniversityGroup {
-    groupName: string
-    id: number
-    currentWeekScheduleLink: string
+    name: string
+    id: string
+    externalId: number
+}
+
+export interface ErrorResponse {
+    error_id: string
 }
 
 export default interface ILesson {
@@ -31,6 +35,15 @@ export interface ILessonTeacher {
     firstName: string
     lastName: string
     patronymic: string
+}
+
+export interface IGetMe {
+    id: string
+    groupId: string | null
+    firstName: string
+    lastName: string
+    patronymic: string
+    photoUrl: string
 }
 
 export const ScheduleDays = {

@@ -38,7 +38,7 @@ const MainPage = () => {
     })
 
     const [fetchGroups] = useFetching(async() => {
-        const response = await MigaikService.searchGroup()
+        const response = await MigaikService.getGroups()
         setGroups(response.data)
     })
 

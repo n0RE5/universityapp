@@ -11,8 +11,8 @@ interface SelectProps {
 
 const Select: React.FC<SelectProps> = ({ groups, onChange, currentGroupId, currentGroupName }) => {
     const groupsSelectOptions = groups.map(group => ({
-        value: group.id.toString(),
-        label: group.groupName
+        value: group.id,
+        label: group.name
     }))
 
     return (
