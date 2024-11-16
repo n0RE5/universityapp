@@ -16,7 +16,7 @@ const Schedule: React.FC<ScheduleProps> = ({ schedule }) => {
         const scheduleDateArray = schedule.map(i => parseLessonDate(i))
         const hightlightIndex = getNearestDate(currentDate, scheduleDateArray)
         const hightlightedLesson = schedule[hightlightIndex]
-        return hightlightedLesson?.lessonStartTime === lesson.lessonStartTime
+        return hightlightedLesson?.lessonEndTime === lesson.lessonEndTime
     }
 
     return (
