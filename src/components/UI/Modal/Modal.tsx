@@ -12,7 +12,7 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ isActive, setIsActive, children, className, title, onDone }) => {
     return (
-        <div className={`absolute top-0 right-0 left-0 bottom-0 dark:shadow-none ${isActive ? 'translate-y-[5px]' : 'translate-y-[120vh]'} transition-all `}>
+        <div className={`fixed top-0 right-0 left-0 bottom-0 dark:shadow-none ${isActive ? 'translate-y-[5px]' : 'translate-y-[120vh]'} transition-all `}>
             <div className={`bg-white pt-2 relative h-[100vh] dark:bg-[#222222] shadow-[0px_0px_5px_rgba(0_0_0_.25)] rounded-[40px] ${className}`}>
                 <PageTitle>
                     {title}
