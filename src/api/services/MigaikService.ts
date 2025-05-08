@@ -3,29 +3,35 @@ import { $migaikApi, API_URL } from "..";
 import { IGetMe, IGetScheduleResponse, IUniversityGroup } from "../../types/migaik";
 
 export default class MigaikService {
-    static async getSchedule(groupId: number | string, date: Date): Promise<AxiosResponse<IGetScheduleResponse>> {
-        return $migaikApi.get<IGetScheduleResponse>(`/groups/get/schedule/${groupId}?date=${date.toISOString()}`)
+    static async getSchedule(groupId: string, date: Date): Promise<AxiosResponse<IGetScheduleResponse>> {
+        return $migaikApi.get<IGetScheduleResponse>(`/api/v1/groups/${groupId}/schedule`, {
+            params: {
+                date: date.toISOString()
+            }
+        })
     }
     static async getGroups(): Promise<AxiosResponse<IUniversityGroup[]>> {
-        return $migaikApi.get<IUniversityGroup[]>(`/groups/get`)
+        return $migaikApi.get<IUniversityGroup[]>(`/api/v1/groups`)
     }
     static async getGroup(groupId: string): Promise<AxiosResponse<IUniversityGroup>> {
-        return $migaikApi.get<IUniversityGroup>(`/groups/get/${groupId}`)
+        return $migaikApi.get<IUniversityGroup>(`/api/v1/groups/${groupId}`)
     }
     static async contactHeadman(message: string): Promise<AxiosResponse> {
-        return $migaikApi.post(`/groups/contact_headman`, {
+        return $migaikApi.post(`/api/v1/groups/contact_headman`, {
             message
         })
     }
-    static async joinGroup(group_id: string): Promise<AxiosResponse> {
-        return $migaikApi.post(`/applications/join/${group_id}`)
+    static async joinGroup(groupId: string): Promise<AxiosResponse> {
+        return $migaikApi.post(`/api/v1/applications`, {
+            group_id: groupId
+        })
     }
-    static async init(initData: string): Promise<AxiosResponse<{token: string}>> {
-        return axios.post<{token: string}>(`${API_URL}/auth/init`, {
-            initData
+    static async init(initData: string): Promise<AxiosResponse<{access_token: string}>> {
+        return axios.post<{access_token: string}>(`${API_URL}/api/v1/auth/init`, {
+            init_data: initData
         })
     }
     static async getMe(): Promise<AxiosResponse<IGetMe>> {
-        return $migaikApi.get<IGetMe>(`/users/get/me`)
+        return $migaikApi.get<IGetMe>(`/api/v1/users/me`)
     }
 }

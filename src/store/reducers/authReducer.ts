@@ -7,7 +7,7 @@ interface AuthState {
     groupId: string | null
     firstName: string
     lastName: string
-    patronymic: string
+    middleName: string
     photoUrl: string
     isLoading: boolean
 }
@@ -18,7 +18,7 @@ const initialState: AuthState = {
     groupId: null,
     firstName: "",
     lastName: "",
-    patronymic: "",
+    middleName: "",
     photoUrl: "",
     isLoading: false
 }
@@ -44,11 +44,11 @@ const authSlice = createSlice({
             })
             .addCase(fetchMe.fulfilled, (state, action) => {
                 state.isLoading = false
-                state.firstName = action.payload.firstName
-                state.lastName = action.payload.lastName
-                state.patronymic = action.payload.patronymic
-                state.photoUrl = action.payload.photoUrl
-                state.groupId = action.payload.groupId
+                state.firstName = action.payload.first_name
+                state.lastName = action.payload.last_name
+                state.middleName = action.payload.middle_name
+                state.photoUrl = action.payload.photo_url
+                state.groupId = action.payload.group_id
             })
             .addCase(fetchMe.rejected, (state) => {
                 state.isLoading = false

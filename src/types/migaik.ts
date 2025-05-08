@@ -8,7 +8,9 @@ export interface IGetScheduleResponse {
 export interface IUniversityGroup {
     name: string
     id: string
-    externalId: number
+    created_date: string
+    updated_date: string
+    external_id: number
 }
 
 export interface ErrorResponse {
@@ -39,11 +41,13 @@ export interface ILessonTeacher {
 
 export interface IGetMe {
     id: string
-    groupId: string | null
-    firstName: string
-    lastName: string
-    patronymic: string
-    photoUrl: string
+    group_id: string | null
+    first_name: string
+    last_name: string
+    middle_name: string
+    photo_url: string
+    telegram_id: string
+    username: string
 }
 
 export const ScheduleDays = {
@@ -57,7 +61,8 @@ export const ScheduleDays = {
 
 export const LessonTypes = {
     practice: 'Практические занятия',
-    lection: 'Лекционные занятия'
+    lection: 'Лекционные занятия',
+    lab: 'Лабораторные занятия'
 } as const
 
 export type LessonType = typeof LessonTypes[keyof typeof LessonTypes]
